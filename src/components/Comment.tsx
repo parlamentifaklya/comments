@@ -2,6 +2,8 @@ import Score from "./Score"
 import { Comment as CommentType } from "../types/ApiResponse"
 import Reply from "./Reply"
 import replyIcon from "../assets/icon-reply.svg"
+import "../index.css"
+
 const Comment = (props: CommentType) => {
   return (
     <>

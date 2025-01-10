@@ -1,6 +1,7 @@
 import Score from "./Score"
 import { Reply as ReplyType } from "../types/ApiResponse"
 import replyIcon from "../assets/icon-reply.svg"
+import "../index.css"
 
 const Reply = (props: ReplyType) => {
   return (
@@ -13,7 +14,7 @@ const Reply = (props: ReplyType) => {
             <button type="button"><img src={replyIcon}/>Reply</button>
         </div>
         <div className="content">
-            <a href="#">@{props.replyTo}</a>
+            <a href="#">@ {props.replyTo}</a>
             {props.content}
         </div>
     </section>

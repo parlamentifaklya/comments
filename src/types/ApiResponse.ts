@@ -6,13 +6,17 @@ export type User = {
     username: string
 }
 
+export interface Reply extends Omit<Comment, 'reply'> {
+    replyTo: string;
+}
+
 export type Comment = {
     id: number,
     content: string,
     createdAt: string
     score: number,
     user: User,
-    reply: (Omit<Comment, 'reply'> & { replyTo: string })[]
+    replies: Reply[]
 }
 
 export type ApiResponse = {

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ApiResponse } from './types/ApiResponse';
 import { getComments } from './services/ApiService';
+import Comment from './components/Comment';
 
 const App = () => {
 
@@ -11,7 +12,9 @@ const App = () => {
   }, [])
 
   return (
-    <div>{apiRes?.currentUser.username}</div>
+    <div>
+      {apiRes?.comments.map(comment => <Comment {...comment}/>)}
+    </div>
   )
 }
 
